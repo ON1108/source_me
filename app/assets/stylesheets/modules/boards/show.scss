@@ -1,0 +1,189 @@
+.board-show {
+  font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN';
+
+  .container-fluid{
+
+    // 以下、メイン部分ーーーーーーーーーーーーーーーーーーーーーー
+    .main {
+      margin: 0 auto;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+
+      .header {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 1vh;
+        height: 10vh;
+        
+        .fa-bars {
+          text-shadow:0 2px 0 #888, 0 3px 0 #888, 0 4px 5px #333;
+          margin-top: 1vw;
+          float: right;
+          font-size: 8vh;
+          margin-right: 2vw;
+        }
+        .fa-bars:hover {
+          color: red;
+        }
+
+        .fa-align-right {
+          text-shadow:0 2px 0 #888, 0 3px 0 #888, 0 4px 5px #333;
+          margin-top: 1vw;
+          float: right;
+          font-size: 8vh;
+          margin-right: 2vw;
+        }
+        .fa-align-right:hover {
+          color: red;
+        }
+
+        .fa-user-circle {
+          text-shadow:0 2px 0 #888, 0 3px 0 #888, 0 4px 5px #333;
+          margin-top: 1vw;
+          font-size: 8vh;
+          margin-right: 2vw;
+        }
+        .fa-user-circle:hover {
+          color:red;
+        }
+
+        .fa-sign-out-alt {
+          text-shadow:0 2px 0 #888, 0 3px 0 #888, 0 4px 5px #333;
+          margin-top: 1vw;
+          font-size: 8vh;
+          margin-right: 2vw;
+        }
+        .fa-sign-out-alt:hover {
+          color:red;
+        }
+      }
+
+      .title {
+        h1 {
+          text-shadow:0 2px 0 #888, 0 3px 0 #888, 0 4px 5px #333;
+          padding-top: 3vh;
+          font-size: 12vh;
+          text-align: center;
+          letter-spacing: 5px;
+          font-weight: bold;
+          color: black;
+        }
+      }
+
+      .boardList {
+        overflow: scroll;
+        overflow-y: hidden;
+        position: relative;
+        z-index: 10;
+        display: flex;
+        justify-content: flex-start;
+        padding: 7vh 0;
+        padding-left: 9vh;
+
+        .next {
+          .fa-angle-double-right {
+            font-size: 8vh;
+          }
+        }
+
+        a {
+
+          .board {
+            box-shadow:0 2px 0 #888, 0 3px 0 #888, 0 4px 5px #333;
+            width: 18vw;
+            height: 12vw;
+            margin: 5vh 0;
+            margin-right: 9vh;
+            border-radius: 5%;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s all ease 0s;
+            cursor: pointer;
+            opacity: 0.6;
+            // 自動スクロール アニメーション
+            // animation: infinity-loop 15s infinite linear 0s both;
+            p {
+              line-height: 20vw;
+              font-size: 28px;
+              font-weight: bold;
+              color: black;
+              word-wrap: break-word;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap;
+              margin-bottom: 0;
+              text-align: center;
+              transition: 0.3s all ease 0s;
+            }
+          }
+
+          .board:hover {
+            border: 2px solid black;
+            width: 21vw;
+            height: 15vw;
+            margin-top: 2vh;
+            margin-bottom: 2vh;
+            opacity: 1;
+            p {
+              font-size: 35px;
+              font-weight: bold;
+              letter-spacing: 7px
+            }
+          }
+        }
+      }
+
+      .add-board{
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 2vw 0 0;
+        margin:1vh 0;
+
+        .fa-plus-circle {
+          text-shadow:0 2px 0 #888, 0 3px 0 #888, 0 4px 5px #333;
+          font-size: 18vh;
+          color: red;
+          cursor: pointer;
+          animation: top-jump_effect 1.5s infinite ease 0s;
+        }
+        .fa-plus-circle:hover {
+          opacity: 0.5;
+        }
+      }
+
+
+
+      ::-webkit-scrollbar {
+        display: none;
+        -webkit-appearance: none;
+      }
+    }
+  }
+}
+
+@keyframes top-jump_effect {
+  0%, 100%, 20%, 50%, 80% {
+      transform: translateY(0px);
+  }
+  40% {
+      transform: translateY(-20px);
+  }
+  60% {
+      transform: translateY(-8px);
+  }
+}
+
+
+
+@keyframes infinity-loop {
+  0% {
+    transform: translateX(0vw);
+  }
+  100% {
+    transform: translateX(-50vw);
+  }
+}

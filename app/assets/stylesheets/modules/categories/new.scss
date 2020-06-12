@@ -1,0 +1,158 @@
+.categories-new {
+  font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN';
+  position: absolute;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.85);
+  width: 100vw;
+  left: 0;
+  height:92.4vh;
+  
+  .main {
+  
+    .boardCreate {
+      width: 42vw;
+      border-radius: 20px;
+      padding:30px;
+      border: 4px double white;
+      margin: 20vh auto;
+      
+      
+      
+  
+      &__title {
+        text-shadow:0 2px 0 #888, 0 3px 0 #888, 0 4px 5px #333;
+        margin: 0 10px;
+        margin-bottom: 7vh;
+        p {
+          padding-bottom: 1vh;
+          text-align: center;
+          width: 35vw;
+          margin: 0 auto;
+          font-size: 2vw;
+          font-weight: bold;
+          color: white;
+          line-height: 40px;
+          margin-bottom: 0px;
+          letter-spacing: 10px;
+          border-bottom: 2px solid red;
+        }
+      }
+  
+      &__form {
+        text-align: center;
+        margin-top:40px;
+  
+        .title {
+  
+          &__form {
+            height: 7vh;
+            width: 30vw;
+            border-radius: 10px;
+            opacity: 0.8;
+            font-size: 18px;
+            font-weight: bold;
+            outline: 0;
+            padding-left: 10px;
+            font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN';
+          }
+
+          &__board-id {
+            display: none;
+          }
+  
+          &__form:focus {
+            opacity: 1;
+          }
+        }
+  
+        .submit {
+          margin-top:50px;
+  
+          &__btn {
+            background-color: red;
+            color: white;
+            text-align: center;
+            width: 10vw;
+            border-radius: 10px;
+            cursor: pointer;
+            border: 4px double grey;
+            outline: 0;
+            padding: 10px 0 10px 0;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            font-weight: bold;
+            transition: all 0.3s ease 0s;
+  
+            p {
+              line-height: 30px;
+              font-size: 20px;
+              font-weight: bold;
+              color:  gray;
+              margin-bottom: 0;
+            }
+  
+          }
+              &__btn:hover {
+                letter-spacing: 7px;
+  
+                p {
+                  font-weight: bold;
+                }
+              }
+        }
+      }
+
+      .submit-back {
+        background-color: lightgray;
+        width: 16vh;
+        font-size: 25px;
+        margin:0 auto;
+        text-align: center;
+        border-radius: 10px;
+        padding: 10px;
+        cursor: pointer;
+  
+        .back-btn {
+          text-align: center;
+          color: gray;
+        }
+      }
+  
+      a {
+        text-decoration: none;
+        color: gray;
+      }
+  
+      .submit-back:hover {
+        opacity: 0.5;
+        color: black;
+        font-weight: bold;
+      }
+  
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+  .submit-back{
+    display: flex;
+    justify-content: flex-end;
+
+    .fa-times-circle {
+      text-shadow:0 2px 0 #888, 0 3px 0 #888, 0 4px 5px #333;
+      font-size: 80px;
+      color: red;
+      margin-bottom: 20px;
+      position: fixed;
+      right: 50px;
+      top: 100px;
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+    }
+  }
+
+  .fa-times-circle:hover {
+    opacity: 1;
+    font-size: 100px;
+  }
+}

@@ -1,0 +1,19 @@
+%div.boards-new
+  .container-fluid
+    .row
+      = render 'shared/header'
+      = render 'shared/error-message'
+      .main
+        = form_with(model:@board, local: true) do |f|
+          .boardCreate
+            .boardCreate__title
+              %p 新しいボードの作成
+            .boardCreate__form
+              .title
+                = f.text_field :name, class:"title__form", placeholder:"タイトルを入力 ( 最大20文字 )", autofocus: true
+              .submit
+                = f.submit "作成する", class:"submit__btn"
+              .sourceCreate__title
+                = link_to "user_path(#{current_user.id})", class:"back-btn" do
+                  .submit-back
+                    戻る

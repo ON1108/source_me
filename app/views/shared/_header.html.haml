@@ -1,0 +1,29 @@
+%header
+  .left-contents
+    .search
+      = search_field  "", "", class:"search__form", placeholder:"キーワードを入力"
+      = link_to "#" do
+        %button{type:"submit", class:"search__btn"}
+          %i.fas.fa-search
+  .center-contents
+    .logo
+      = link_to root_path, class:"logo-contents" do
+        %i.fas.fa-link
+        %p SourceMe
+  - if user_signed_in?
+    .right-contents
+      = link_to new_board_path do
+        .boardCreateBtn
+          %i.fas.fa-plus
+      = link_to user_path(current_user.id) do
+        .mypageBtnBox
+          .mypageBtn
+            .user-nickname
+              = current_user.nickname
+  - else
+    .right-contents
+      = link_to new_user_registration_path do
+        新規登録
+      = link_to user_session_path do
+        ログイン
+

@@ -1,0 +1,31 @@
+%div
+  .container-fluid
+    .row
+      .source-header
+        = link_to board_path(@board_id), data: {"turbolinks" => false} do
+          %p
+            = @board_id.name
+      .show-main
+        .side
+          .side__categories
+            .top
+              .top__title
+                %i.far.fa-folder
+                %p Category 一覧
+            .center
+              #category-contents.category-contents
+                - i = 0
+                -  while i < @category.length
+                  #category-box.category-box(data-source-id="#{@category[i].sources.ids}" data-category-id="#{@category[i].id}" data-board-id="#{params[:id]}")
+                    .category-title
+                      %p
+                        = @category[i].name
+                  - i += 1
+            .bottom
+              #createCategoryBtn.createCategoryBtn(data-board-id="#{params[:id]}")
+                %i.fas.fa-folder-plus
+                %p カテゴリーを追加する
+          .side__sources
+            #center.center
+        .body-contents
+          #body.body

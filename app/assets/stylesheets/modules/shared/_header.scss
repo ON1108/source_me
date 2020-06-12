@@ -1,0 +1,193 @@
+div {
+  .container-fluid{
+    height: calc(100vh - 140px);
+
+    // 以下、ヘッダー部分ーーーーーーーーーーーーーーーーーーーーーー
+    header {
+      height: 70px;
+      width:100vw;
+      border-bottom: 1px solid black;
+      .left-contents {
+
+        .search {
+          height: 50px;
+          padding-top: 10px;
+          display: flex;
+
+          &__form {
+            width: 160px;
+            background-color: white;
+            font-size: 100%;
+            border-radius: 20px;
+            outline: 0;
+            color: black;
+            font-weight: bold;
+            margin-top: 5px;
+            transition: 0.2s all ease 0s;
+            padding-left: 8px;
+            font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN';
+          }
+          &__form:focus {
+            width: 230px;
+            
+          }
+
+          &__btn {
+            height: 40px;
+            width: 40px;
+            box-sizing: border-box;
+            border-radius: 50px;
+            transform:rotate(25deg);
+            cursor: pointer;
+            outline: 0;
+            transition: 0.2s all ease 0s;
+            opacity: 0.7;
+            margin-left: 6px;
+            border: 1px solid gray;
+
+            .fa-search {
+              color: white;
+              -webkit-text-stroke: 1px gray;
+            }
+          }
+          &__btn:hover {
+            opacity: 1;
+            border-radius: 50px;
+            border: 2px solid black;
+
+            .fa-search {
+              -webkit-text-stroke: 1px black;
+              color:black;
+            }
+          }
+        }
+      }
+      
+      .center-contents {
+        
+        .logo {
+          width: 0vw;
+          text-align: center;
+          margin: 0 auto;
+          .logo-contents {
+            display: flex;
+
+            .fa-link {
+              height: 70px;
+              line-height: 70px;
+              font-size:20px;
+              color: white;
+              margin-right: 2px;
+              transition: 0.3s all ease 0s;
+              -webkit-text-stroke: 1px black;
+            }
+
+            p:nth-of-type(1) {
+              line-height: 70px;
+              font-size: 23px;
+              width: 100px;
+              font-weight: bold;
+              font-family: 'Kaiti TC';
+              color: white;
+              transition: 0.3s all ease 0s;
+              -webkit-text-stroke: 1px black;
+            }
+          }
+          .logo-contents:hover {
+            .fa-link {
+              transform:rotateX(360deg);
+              -webkit-text-stroke: 1px black;
+              color: black;
+            }
+            p:nth-of-type(1) {
+              -webkit-text-stroke: 1px black;
+              color: black;
+            }
+          }
+
+          a {
+            text-decoration: none;
+          }
+
+          a:hover {
+            text-decoration: none;
+          }
+          }
+      }
+
+      .right-contents {
+        display: flex;
+
+        .boardCreateBtn {
+          height: 50px;
+          width: 50px;
+          box-sizing: border-box;
+          border-radius: 10px;
+          margin:0 10px;
+          border: 4px double black;
+          padding: 8px;
+          margin-top: 10px;
+          transition: 0.2s all ease 0s;
+          cursor: pointer;
+
+          .fa-plus {
+            color: white;
+            font-size: 30px;
+            transition: 0.2s all ease 0s;
+            -webkit-text-stroke: 1px black;
+            
+          }
+        }
+        .boardCreateBtn:hover {
+          border: 2px solid black;
+          padding: 10px;
+
+          .fa-plus{
+            transform:rotate3d(1,1,1,360deg);
+            color:black;
+          }
+        }
+
+        .mypageBtnBox {
+
+          .mypageBtn {
+            height: 60px;
+            width: 60px;
+            box-sizing: border-box;
+            margin-top: 4px;
+            border-radius: 50px;
+            cursor: pointer;
+            outline: 0;
+            border: 4px double black;
+            transition: 0.2s all ease 0s;
+
+            .user-nickname {
+              max-width: 110px;
+              overflow: hidden;
+              white-space: nowrap;
+              color: gray;
+              text-align: center;
+              line-height: 55px;
+              font-size: 18px;
+            }
+          }
+          
+          .mypageBtn:hover {
+            border: 2px solid black;
+            width: none;
+
+            .user-nickname {
+              font-size: 19px;
+              line-height: 60px;
+              color: black;
+            }
+          }
+        }
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

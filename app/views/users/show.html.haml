@@ -1,0 +1,44 @@
+%div.users-show
+  .container-fluid
+    .row
+      = render 'shared/header'
+      .new-main
+        .sourceCreate
+          .sourceCreate__title
+            %p プロフィール
+          .sourceCreate__form
+            .form-contents
+              .form
+                %p ニックネーム
+                .value
+                  = current_user.nickname
+              .form
+                %p メールアドレス
+                .value
+                  = current_user.email
+              .form
+                %p 姓
+                .value
+                  = current_user.family_name
+              .form
+                %p 名
+                .value
+                  = current_user.first_name
+              .form
+                %p 姓(カナ)
+                .value
+                  = current_user.family_name_kana
+              .form
+                %p 名(カナ)
+                .value
+                  = current_user.first_name_kana
+            = link_to edit_user_registration_path do
+              .submit__btn
+                %p 編集する
+            = link_to destroy_user_session_path, method: :delete do
+              .submit__btn
+                ログアウト
+          .sourceCreate__title
+            = link_to :back, class:"back-btn" do
+              .submit-back
+                戻る
